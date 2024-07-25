@@ -1890,7 +1890,7 @@ textarea.form-input::-webkit-resizer { display: none; }
       width: 100%;
       height: 100%;
       z-index: 1000;
-      background-color: #fff;
+      background-color: var(--bg-gradient-onyx);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1898,7 +1898,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
     .loader {
       --color: #a5a5b0;
-      --size: 30px;
+      --size: 80px;
       width: var(--size);
       height: var(--size);
       display: grid;
