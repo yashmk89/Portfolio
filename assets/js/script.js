@@ -157,3 +157,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+//send mail
+document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const form = event.target;
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert('Message sent successfully!');
+          form.reset();
+        } else {
+          alert('Failed to send message.');
+        }
+      }).catch(error => {
+        alert('Failed to send message.');
+      });
+    });
