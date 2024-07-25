@@ -181,3 +181,10 @@ document.querySelector('form').addEventListener('submit', function(event) {
         alert('Failed to send message.');
       });
     });
+
+// Preloder
+
+ window.addEventListener('load', function () {
+      const preloader = document.querySelector('.preloader');
+      preloader.style.display = 'none';
+    });
